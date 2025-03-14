@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<object Name="Saltwurm" Load="Merge">
+	<part Name="ZeroPointEnergyCollector" ChargeRate="5" ConsiderLive="False" IsEMPSensitive="False" IsTechScannable="false"/>
+    <part Name="Circuitry" StartCharge="5" ConsiderLive="False" IsEMPSensitive="False" IsTechScannable="false" />
+    <part Name="DeploymentMaintainer" Blueprint="cats_krakenarm" Radius="1" BlockedBySolid="true" MaintenanceInterval="20" BlockedByNonEmpty="true" ActiveMaintenance="false" DustPuffEach="true" AtLeast="1" />
+	<part Name="LeavesTrail" TrailBlueprint="cats_krakenarm" TrailChance="100" TemporaryChance="100" TemporaryDuration="2d4" TemporaryTurnInto="cats_krakensalt" TemporaryTurnIntoChance="50" PassAttitudes="true" OnEnter="false" />
+  </object>
+  <object Name="cats_krakenarm" Inherits="BaseWorm">
+    <part Name="Render" DisplayName="salt kraken tentacle" Tile="Creatures/sw_bloatedleech.bmp" RenderString="t" ColorString="&amp;Y" DetailColor="Y" />
+    <part Name="Corpse" CorpseChance="50" CorpseBlueprint="cats_krakensalt" />
+    <stat Name="AV" Value="5" />
+    <stat Name="DV" Value="-10" />
+    <stat Name="Strength" Boost="4" />
+	<stat Name="Intelligence" sValue="1" />
+    <stat Name="Hitpoints" Value="20" />
+    <part Name="Physics" Weight="40000" />
+	<part Name="Temporary" Duration="600" />
+	<part Name="NoXPGain" />
+    <stat Name="Level" Value="1" />
+    <mutation Name="HeightenedHearing" />
+    <part Name="Brain" Hostile="false" Factions="Prey-100,Mollusks-50" Calm="True" />
+	<part Name="CannotBeInfluenced" Messages="There is no mind to be found, only muscle." />
+    <tag Name="NoCure" />
+    <part Name="Description" Short="One of countless powerful limbs of a mighty salt kraken, extended from deep beneath the sands." />
+	<tag Name="SimpleConversation" Value="&amp;w*the tentacle gives no indication of understanding*&amp;y" />
+	<mutation Name="Burrowing" Level="1" />
+    <inventoryobject Blueprint="cats_tentacleattack" Number="1" />
+    <property Name="Role" Value="Minion" />
+	<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	<tag Name="Gender" Value="neuter" />
+  </object>
+  <object Name="cats_krakensalt" Inherits="Water">
+    <part Name="LiquidVolume" MaxVolume="-1" Volume="1" InitialLiquid="salt-1000" />
+    <part Name="Physics" FreezeObject="Halite" />
+  </object>
+  <object Name="cats_tentacleattack" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="powerful crush" />
+    <part Name="MeleeWeapon" BaseDamage="1d8" Skill="Cudgel" Stat="Strength" Slot="Body" />
+	<part Name="JiltedLoverMelee" Chance="25" StuckDuration="10" GrabbedText="grabbed by kraken tentacle" />
+    <tag Name="Gender" Value="neuter" />
+  </object>
+  
+</objects> 

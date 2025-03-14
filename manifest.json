@@ -1,0 +1,10 @@
+{
+	"id": "2388955198",
+	"loadorder": 1,
+	"title": "Multi-Tile Salt Krakens",
+    "description": "The mighty Salt Krakens deserve more hype than just one tile can afford. This mod adds salt kraken  tentacles, which stay hidden beneath the sand until needed for battle. Tentacles do much less damage than the kraken's crushing bands, but have a chance to grab and restrain their targets. A kraken will produce tentacles every 20 turns so that it is surrounded on all sides by tentacles, and will continue doing so until killed. It also leaves tentacles on tiles it leaves, which are much shorter lived than its nine main tentacles. The tentacles will persist for quite awhile after the kraken's death, making taking on a salt kraken a much greater ordeal. Fighting the kraken is now more than just kiting a massive single mob; it's a race to kill the kraken before it can overwhelm you.\n\nBecause the tentacles burrow and eventually despawn, they shouldn't clog up space in settlements, but they might spam the messagebox a tiny bit.",
+	"tags": "Creature, Balance, Kraken",
+	"version": "1.0.0",
+	"author": "CatlikeSpectator, {{glotrot|LunarLaurus}}",
+	"previewImage": "preview.png"
+}
